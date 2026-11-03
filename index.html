@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1220" />
+    <title>KPIs de tienda · demo Mappedin</title>
+    <meta name="description" content="Captación, conversión, aforo en vivo, flujos de pasillo y costo de ocupación de cada tienda, sobre el mapa del mall con Mappedin JS y contadores Vivotek." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KPIs de tienda sobre el mapa · demo" />
+    <meta property="og:description" content="El mall ve en el mapa cuánta gente pasa frente a cada tienda, cuántos entran, cuántos compran y cuánto le cuesta el local a cada marca." />
+    <meta property="og:url" content="https://store-kpis-demo.atlas-lac.com/" />
+    <meta property="og:image" content="https://store-kpis-demo.atlas-lac.com/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">%</span>
+        <div>
+          <strong>KPIs de tienda en el mapa</strong>
+          <small>Contadores Vivotek + tickets + mapa del mall</small>
+        </div>
+      </div>
+      <div class="clock" id="clock" aria-live="polite">—</div>
+    </header>
+
+    <section class="sheet">
+      <div class="seg wide" role="group" aria-label="Periodo">
+        <button type="button" data-period="live" aria-pressed="true">Hoy</button>
+        <button type="button" data-period="1" aria-pressed="false">Ayer</button>
+        <button type="button" data-period="7" aria-pressed="false">7 días</button>
+        <button type="button" data-period="30" aria-pressed="false">30 días</button>
+        <button type="button" data-period="range" aria-pressed="false">Rango</button>
+      </div>
+      <div class="row" id="liveRow">
+        <input type="range" id="time" min="615" max="1320" step="15" value="1020" aria-label="Hora del día" />
+        <button id="play" type="button">▶ Reproducir</button>
+      </div>
+      <div class="row" id="rangeRow" hidden>
+        <label>Desde <input type="date" id="from" /></label>
+        <label>Hasta <input type="date" id="to" /></label>
+      </div>
+
+      <div class="tiles" id="mall"></div>
+
+      <div class="kpi-pick">
+        <span class="label">Colorear el mapa por</span>
+        <div class="chips" role="group" aria-label="KPI del mapa">
+          <button type="button" data-kpi="capture" aria-pressed="true">Captación</button>
+          <button type="button" data-kpi="conversion" aria-pressed="false">Conversión</button>
+          <button type="button" data-kpi="enter" aria-pressed="false">Ingresos</button>
+          <button type="button" data-kpi="pass" aria-pressed="false">Pasillo</button>
+          <button type="button" data-kpi="occupancy" aria-pressed="false">Aforo</button>
+          <button type="button" data-kpi="cost" aria-pressed="false">Costo de ocupación</button>
+        </div>
+        <div class="legend" id="legend"></div>
+      </div>
+
+      <article class="store" id="store">Cargando el mapa…</article>
+
+      <div class="ranking" id="ranking"></div>
+
+      <details class="note">
+        <summary>Cómo se calcula cada KPI</summary>
+        <ul>
+          <li><b>Pasillo:</b> personas que pasan frente a la vitrina, leídas por la línea de pasillo del contador. Se suman los dos sentidos.</li>
+          <li><b>Ingresos:</b> personas que cruzan la puerta hacia adentro, leídas por la línea de ingreso del mismo contador.</li>
+          <li><b>Aforo:</b> ingresos menos salidas acumuladas del día; el contador se pone en cero al cierre. En periodos pasados se muestra el aforo máximo.</li>
+          <li><b>Captación:</b> ingresos ÷ pasillo, en el mismo periodo.</li>
+          <li><b>Conversión:</b> tickets que la tienda reporta por día ÷ ingresos de ese día. Hoy se calcula al cierre, cuando llega el reporte.</li>
+          <li><b>Costo de ocupación:</b> (renta + gastos comunes) ÷ ventas del periodo. Hasta 10 % sano, 10–15 % en observación, más de 15 % en riesgo.</li>
+          <li>La comparación es contra el periodo anterior de la misma duración (un día se compara con el mismo día de la semana anterior).</li>
+        </ul>
+      </details>
+      <p class="note">Datos de ejemplo simulados sobre el mapa demo de Mappedin. En producción, el pasillo, los ingresos y el aforo vienen de las cámaras de conteo Vivotek de cada tienda, y los tickets y ventas, del reporte diario de cada locatario. Las marcas pertenecen a sus dueños, que no participan ni respaldan esta demo.</p>
+    </section>
+
+    <div class="tip" id="tip" role="tooltip" hidden></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

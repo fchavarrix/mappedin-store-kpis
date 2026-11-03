@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="69.505" viewBox="0 0 76 69.505">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #fd0;
+      }
+
+      .cls-4 {
+        fill: #00a160;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="76" height="69.505"/>
+    </clipPath>
+  </defs>
+  <g id="Componente_2" data-name="Componente 2" class="cls-2">
+    <rect id="Rectángulo_1517" data-name="Rectángulo 1517" class="cls-3" width="76" height="69.505"/>
+    <path id="Trazado_79004" data-name="Trazado 79004" class="cls-4" d="M370.815,353.057V338.128H363.24v21.826H376.4v-6.9Z" transform="translate(-351.096 -301.197)"/>
+    <path id="Trazado_79005" data-name="Trazado 79005" class="cls-4" d="M469.4,338.105l-2.8,7.259-2.964-7.259h-7.577l6.9,15.423-2.671,6.4h7.588l9.121-21.826Z" transform="translate(-407.412 -301.183)"/>
+    <path id="Trazado_79006" data-name="Trazado 79006" class="cls-4" d="M411.136,351.877a4.182,4.182,0,1,1,4.219-4.181,4.2,4.2,0,0,1-4.219,4.181m0-15.733A11.553,11.553,0,1,0,422.8,347.7a11.609,11.609,0,0,0-11.665-11.553" transform="translate(-373.079 -299.992)"/>
+    <path id="Trazado_79007" data-name="Trazado 79007" class="cls-4" d="M367.721,271.572H348.688v6.877h5.723v14.92h7.576v-14.92h5.735Z" transform="translate(-342.267 -260.815)"/>
+    <rect id="Rectángulo_1518" data-name="Rectángulo 1518" class="cls-4" width="7.614" height="21.794" transform="translate(50.077 10.758)"/>
+    <path id="Trazado_79008" data-name="Trazado 79008" class="cls-4" d="M496.264,292.738a4.222,4.222,0,1,1-4.222-4.182,4.2,4.2,0,0,1,4.222,4.182" transform="translate(-426.683 -271.12)"/>
+    <path id="Trazado_79009" data-name="Trazado 79009" class="cls-4" d="M402.135,285.372l1.887-5.82,1.886,5.82Zm6.366,8h7.591l-8.611-21.795h-6.917l-8.609,21.795h7.589l.934-2.88h7.089Z" transform="translate(-368.519 -260.816)"/>
+  </g>
+</svg>

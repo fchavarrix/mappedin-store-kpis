@@ -1,0 +1,22 @@
+{
+  "name": "mappedin-store-kpis",
+  "version": "1.0.0",
+  "description": "Store KPIs on the mall map: footfall, capture, conversion, live occupancy and occupancy cost from Vivotek people counters, with Mappedin JS",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@mappedin/mappedin-js": "^6.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  },
+  "private": true
+}

@@ -320,7 +320,7 @@ function renderStore(store: Store, cur: Totals, prev: Totals, dates: Date[], bin
   const { svg, bars } = chart(store, dates, bins);
   const live = period === 'live';
   ui.store.innerHTML = `
-    <header>${logo(store.brand, 'big')}<div><strong>${store.brand.name}</strong><small>${p.label} · ${int(store.sim.area)} m² · contador Vivotek en la puerta</small></div></header>
+    <header>${logo(store.brand, 'big')}<div><strong>${store.brand.name}</strong><small>${p.label} · ${int(store.sim.area)} m² · contador en la puerta</small></div></header>
     <div class="tiles">
       ${tile('Pasillo', 'pass', cur.pass, prev.pass)}
       ${tile('Ingresos', 'enter', cur.enter, prev.enter)}

@@ -1,4 +1,4 @@
-// Simulated counts for each store, as a Vivotek people counter would report them, plus the daily
+// Simulated counts for each store, as a people-counting camera would report them, plus the daily
 // tickets and sales the store reports to the mall. Every number is deterministic per store and
 // date, so the same day always shows the same figures.
 //

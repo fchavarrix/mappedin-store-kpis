@@ -6,7 +6,7 @@
 
 ## Where the numbers come from
 
-Each store has a **Vivotek people counter** over its door with two counting lines:
+Each store has a **people counter** (a counting camera) over its door with two counting lines:
 
 - **Door line:** people in and out. Entries give the store's footfall; entries minus exits give the **live occupancy** (reset at closing time).
 - **Corridor line:** people walking past the store front in both directions. Only the **sum of both directions** is shown.
